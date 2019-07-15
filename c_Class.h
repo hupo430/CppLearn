@@ -10,18 +10,35 @@ using namespace std;
 
 namespace breath{
 
-	class root{
+	class CFatherBase{
 	private:
-		int aa;
-
+		int vIntFb;
+		
 	public:
-		string bb;
-		void setaa(int a);
-		int getaa();
+		string vStrFb;
+		void fSet(int &);
+		int fGet();
+		int fMath(int &);
+		CFatherBase();
+		~CFatherBase();
 		
 	};	
-	
-	
 }
+
+
+
+class CChild:public breath::CFatherBase{
+
+public:
+	CChildBase();
+	~CChildBase();
+	#int fMath(int &);#test use father function
+	int fGet(); #test overwrite
+	void fSetCd(int &); 
+private:
+	string vStrCd;
+	int vCd;
+	
+};
 
 #endif
